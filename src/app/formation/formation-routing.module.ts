@@ -2,6 +2,7 @@ import {RouterModule, Routes} from '@angular/router';
 import {NgModule} from '@angular/core';
 import {FormationComponent} from './formation.component';
 import {InterpolationComponent} from './interpolation/interpolation.component';
+import {PropertyBindingComponent} from './property-binding/property-binding.component';
 
 const formationRoutes: Routes = [
   {
@@ -11,6 +12,10 @@ const formationRoutes: Routes = [
   {
     path: 'interpolation',
     component: InterpolationComponent
+  },
+  {
+    path: 'property-binding',
+    component: PropertyBindingComponent
   }
 ];
 
