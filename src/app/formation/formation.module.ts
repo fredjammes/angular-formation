@@ -8,10 +8,11 @@ import { PropertyBindingComponent } from './property-binding/property-binding.co
 import { EventBindingComponent } from './event-binding/event-binding.component';
 import { NgModelComponent } from './ng-model/ng-model.component';
 import {FormsModule} from '@angular/forms';
+import { NgIfComponent } from './ng-if/ng-if.component';
 
 
 @NgModule({
-  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent, NgModelComponent],
+  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent, NgModelComponent, NgIfComponent],
   imports: [
     CommonModule,
     FormationRoutingModule,
