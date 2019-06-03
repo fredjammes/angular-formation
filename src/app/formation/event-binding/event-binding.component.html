@@ -1,2 +1,3 @@
-<button (click)="switchColor()">Change color</button>
-<div class="square" [ngClass]="{'red': isRed}"></div>
+<button (click)="switchColor()">fill with black</button>
+<input (blur)="switchColor($event)"/> Change color
+<div class="square" [style.background]="squareColor"></div>
