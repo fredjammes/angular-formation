@@ -5,10 +5,11 @@ import {InterpolationComponent} from './interpolation/interpolation.component';
 import {FormationRoutingModule} from './formation-routing.module';
 import {RouterModule} from '@angular/router';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
+import { EventBindingComponent } from './event-binding/event-binding.component';
 
 
 @NgModule({
-  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent],
+  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent],
   imports: [
     CommonModule,
     FormationRoutingModule,
