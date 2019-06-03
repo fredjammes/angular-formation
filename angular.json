@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "q4g",
+      "prefix": "app",
       "schematics": {},
       "architect": {
         "build": {

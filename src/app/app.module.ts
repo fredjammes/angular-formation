@@ -1,8 +1,10 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
+import {BrowserModule} from '@angular/platform-browser';
+import {NgModule} from '@angular/core';
 
-import { AppComponent } from './app.component';
-import { MyFeatModule } from './my-feat/my-feat.module';
+import {AppComponent} from './app.component';
+import {FormationModule} from './formation/formation.module';
+import {AppRoutingModule} from './app-routing.module';
+import {RouterModule} from '@angular/router';
 
 @NgModule({
   declarations: [
@@ -10,9 +12,12 @@ import { MyFeatModule } from './my-feat/my-feat.module';
   ],
   imports: [
     BrowserModule,
-    MyFeatModule
+    FormationModule,
+    AppRoutingModule,
+    RouterModule
   ],
   providers: [],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule {
+}
