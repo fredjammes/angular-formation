@@ -4,6 +4,7 @@ import {FormationComponent} from './formation.component';
 import {InterpolationComponent} from './interpolation/interpolation.component';
 import {PropertyBindingComponent} from './property-binding/property-binding.component';
 import {EventBindingComponent} from './event-binding/event-binding.component';
+import {NgModelComponent} from './ng-model/ng-model.component';
 
 const formationRoutes: Routes = [
   {
@@ -21,6 +22,10 @@ const formationRoutes: Routes = [
   {
     path: 'event-binding',
     component: EventBindingComponent
+  },
+  {
+    path: 'ng-model',
+    component: NgModelComponent
   }
 ];
 

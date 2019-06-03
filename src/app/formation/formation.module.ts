@@ -6,14 +6,17 @@ import {FormationRoutingModule} from './formation-routing.module';
 import {RouterModule} from '@angular/router';
 import { PropertyBindingComponent } from './property-binding/property-binding.component';
 import { EventBindingComponent } from './event-binding/event-binding.component';
+import { NgModelComponent } from './ng-model/ng-model.component';
+import {FormsModule} from '@angular/forms';
 
 
 @NgModule({
-  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent],
+  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent, NgModelComponent],
   imports: [
     CommonModule,
     FormationRoutingModule,
-    RouterModule
+    RouterModule,
+    FormsModule
   ]
 })
 export class FormationModule {

@@ -1,0 +1,23 @@
+<section>
+  <input type="text" [(ngModel)]="typedText"/>
+  <span> Vous avez saisi : {{typedText}}</span>
+</section>
+<section>
+  <input type="checkbox" [(ngModel)]="isValue1Checked"/> Valeur 1
+  <input type="checkbox" [(ngModel)]="isValue2Checked"/> Valeur 2
+  <input type="checkbox" [(ngModel)]="isValue3Checked"/> Valeur 3
+  ==> Valeur(s) selectionnée(s) : Valeur 1 : {{isValue1Checked}} | Valeur 2 : {{isValue2Checked}} | Valeur 3 : {{isValue3Checked}}
+
+</section>
+<section>
+  <select [(ngModel)]="selectedValue">
+    <option *ngFor="let option of options" [value]="option.id">{{option.label}}</option>
+  </select>
+  <span> Option selectionnée : {{selectedValue}}</span>
+</section>
+<section>
+  <select [(ngModel)]="selectedNgValue">
+    <option *ngFor="let option of options" [ngValue]="option">{{option.label}}</option>
+  </select>
+  <span> label selectionné : {{selectedNgValue?.label}} | id selectionné : {{selectedNgValue?.id}}</span>
+</section>
