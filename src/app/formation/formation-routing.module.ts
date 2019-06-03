@@ -6,6 +6,7 @@ import {PropertyBindingComponent} from './property-binding/property-binding.comp
 import {EventBindingComponent} from './event-binding/event-binding.component';
 import {NgModelComponent} from './ng-model/ng-model.component';
 import {NgIfComponent} from './ng-if/ng-if.component';
+import {TemplateReferenceComponent} from './template-reference/template-reference.component';
 
 const formationRoutes: Routes = [
   {
@@ -23,6 +24,10 @@ const formationRoutes: Routes = [
   {
     path: 'event-binding',
     component: EventBindingComponent
+  },
+  {
+    path: 'template-reference',
+    component: TemplateReferenceComponent
   },
   {
     path: 'ng-if',

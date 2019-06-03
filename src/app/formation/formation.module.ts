@@ -4,15 +4,24 @@ import {FormationComponent} from './formation.component';
 import {InterpolationComponent} from './interpolation/interpolation.component';
 import {FormationRoutingModule} from './formation-routing.module';
 import {RouterModule} from '@angular/router';
-import { PropertyBindingComponent } from './property-binding/property-binding.component';
-import { EventBindingComponent } from './event-binding/event-binding.component';
-import { NgModelComponent } from './ng-model/ng-model.component';
+import {PropertyBindingComponent} from './property-binding/property-binding.component';
+import {EventBindingComponent} from './event-binding/event-binding.component';
+import {NgModelComponent} from './ng-model/ng-model.component';
 import {FormsModule} from '@angular/forms';
-import { NgIfComponent } from './ng-if/ng-if.component';
+import {NgIfComponent} from './ng-if/ng-if.component';
+import {TemplateReferenceComponent} from './template-reference/template-reference.component';
 
 
 @NgModule({
-  declarations: [FormationComponent, InterpolationComponent, PropertyBindingComponent, EventBindingComponent, NgModelComponent, NgIfComponent],
+  declarations: [
+    FormationComponent,
+    InterpolationComponent,
+    PropertyBindingComponent,
+    EventBindingComponent,
+    NgModelComponent,
+    NgIfComponent,
+    TemplateReferenceComponent
+  ],
   imports: [
     CommonModule,
     FormationRoutingModule,
