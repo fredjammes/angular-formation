@@ -7,6 +7,7 @@ import {EventBindingComponent} from './event-binding/event-binding.component';
 import {NgModelComponent} from './ng-model/ng-model.component';
 import {NgIfComponent} from './ng-if/ng-if.component';
 import {TemplateReferenceComponent} from './template-reference/template-reference.component';
+import {DirectiveComponent} from './directive/directive.component';
 
 const formationRoutes: Routes = [
   {
@@ -36,6 +37,10 @@ const formationRoutes: Routes = [
   {
     path: 'ng-model',
     component: NgModelComponent
+  },
+  {
+    path: 'directive',
+    component: DirectiveComponent
   }
 ];
 

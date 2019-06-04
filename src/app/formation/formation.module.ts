@@ -10,6 +10,8 @@ import {NgModelComponent} from './ng-model/ng-model.component';
 import {FormsModule} from '@angular/forms';
 import {NgIfComponent} from './ng-if/ng-if.component';
 import {TemplateReferenceComponent} from './template-reference/template-reference.component';
+import { DirectiveComponent } from './directive/directive.component';
+import {SharedModule} from '../shared/shared.module';
 
 
 @NgModule({
@@ -20,13 +22,15 @@ import {TemplateReferenceComponent} from './template-reference/template-referenc
     EventBindingComponent,
     NgModelComponent,
     NgIfComponent,
-    TemplateReferenceComponent
+    TemplateReferenceComponent,
+    DirectiveComponent
   ],
   imports: [
     CommonModule,
     FormationRoutingModule,
     RouterModule,
-    FormsModule
+    FormsModule,
+    SharedModule
   ]
 })
 export class FormationModule {
