@@ -10,10 +10,11 @@ import {NgModelComponent} from './ng-model/ng-model.component';
 import {FormsModule} from '@angular/forms';
 import {NgIfComponent} from './ng-if/ng-if.component';
 import {TemplateReferenceComponent} from './template-reference/template-reference.component';
-import { DirectiveComponent } from './directive/directive.component';
+import {DirectiveComponent} from './directive/directive.component';
 import {SharedModule} from '../shared/shared.module';
-import { NgForComponent } from './ng-for/ng-for.component';
-import { NgSwitchComponent } from './ng-switch/ng-switch.component';
+import {NgForComponent} from './ng-for/ng-for.component';
+import {NgSwitchComponent} from './ng-switch/ng-switch.component';
+import { PipeComponent } from './pipe/pipe.component';
 
 
 @NgModule({
@@ -27,7 +28,8 @@ import { NgSwitchComponent } from './ng-switch/ng-switch.component';
     TemplateReferenceComponent,
     DirectiveComponent,
     NgForComponent,
-    NgSwitchComponent
+    NgSwitchComponent,
+    PipeComponent
   ],
   imports: [
     CommonModule,

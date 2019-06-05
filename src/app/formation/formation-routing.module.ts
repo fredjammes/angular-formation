@@ -10,6 +10,7 @@ import {TemplateReferenceComponent} from './template-reference/template-referenc
 import {DirectiveComponent} from './directive/directive.component';
 import {NgForComponent} from './ng-for/ng-for.component';
 import {NgSwitchComponent} from './ng-switch/ng-switch.component';
+import {PipeComponent} from './pipe/pipe.component';
 
 const formationRoutes: Routes = [
   {
@@ -51,6 +52,10 @@ const formationRoutes: Routes = [
   {
     path: 'directive',
     component: DirectiveComponent
+  },
+  {
+    path: 'pipe',
+    component: PipeComponent
   }
 ];
 
