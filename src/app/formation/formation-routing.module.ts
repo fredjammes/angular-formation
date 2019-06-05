@@ -8,6 +8,7 @@ import {NgModelComponent} from './ng-model/ng-model.component';
 import {NgIfComponent} from './ng-if/ng-if.component';
 import {TemplateReferenceComponent} from './template-reference/template-reference.component';
 import {DirectiveComponent} from './directive/directive.component';
+import {NgForComponent} from './ng-for/ng-for.component';
 
 const formationRoutes: Routes = [
   {
@@ -33,6 +34,10 @@ const formationRoutes: Routes = [
   {
     path: 'ng-if',
     component: NgIfComponent
+  },
+  {
+    path: 'ng-for',
+    component: NgForComponent
   },
   {
     path: 'ng-model',
