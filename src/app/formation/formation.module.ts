@@ -18,6 +18,7 @@ import { PipeComponent } from './pipe/pipe.component';
 import { InputResizerComponent } from './input-resizer/input-resizer.component';
 import { InputResizer2Component } from './input-resizer2/input-resizer2.component';
 import { InputResizer3Component } from './input-resizer3/input-resizer3.component';
+import { InputResizer4Component } from './input-resizer4/input-resizer4.component';
 
 
 @NgModule({
@@ -35,7 +36,8 @@ import { InputResizer3Component } from './input-resizer3/input-resizer3.componen
     PipeComponent,
     InputResizerComponent,
     InputResizer2Component,
-    InputResizer3Component
+    InputResizer3Component,
+    InputResizer4Component
   ],
   imports: [
     CommonModule,
