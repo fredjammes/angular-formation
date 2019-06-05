@@ -15,6 +15,9 @@ import {SharedModule} from '../shared/shared.module';
 import {NgForComponent} from './ng-for/ng-for.component';
 import {NgSwitchComponent} from './ng-switch/ng-switch.component';
 import { PipeComponent } from './pipe/pipe.component';
+import { MaterialComponent } from './material/material.component';
+import { InputResizerComponent } from './input-resizer/input-resizer.component';
+import { InputResizer2Component } from './input-resizer2/input-resizer2.component';
 
 
 @NgModule({
@@ -29,7 +32,10 @@ import { PipeComponent } from './pipe/pipe.component';
     DirectiveComponent,
     NgForComponent,
     NgSwitchComponent,
-    PipeComponent
+    PipeComponent,
+    MaterialComponent,
+    InputResizerComponent,
+    InputResizer2Component
   ],
   imports: [
     CommonModule,

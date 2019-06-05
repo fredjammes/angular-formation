@@ -1,0 +1,9 @@
+<div>
+  <label for="width-input">Width :</label>
+  <input id="width-input" type="number" (change)="resize(widthInput.value, heightInput.value)" #widthInput>
+</div>
+<div>
+  <label for="height-input">Height :</label>
+  <input id="height-input" type="number" (change)="resize(widthInput.value, heightInput.value)" #heightInput>
+</div>
+<div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>

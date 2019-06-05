@@ -11,6 +11,9 @@ import {DirectiveComponent} from './directive/directive.component';
 import {NgForComponent} from './ng-for/ng-for.component';
 import {NgSwitchComponent} from './ng-switch/ng-switch.component';
 import {PipeComponent} from './pipe/pipe.component';
+import {MaterialComponent} from './material/material.component';
+import {InputResizerComponent} from './input-resizer/input-resizer.component';
+import {InputResizer2Component} from './input-resizer2/input-resizer2.component';
 
 const formationRoutes: Routes = [
   {
@@ -28,6 +31,14 @@ const formationRoutes: Routes = [
   {
     path: 'event-binding',
     component: EventBindingComponent
+  },
+  {
+    path: 'input-resizer',
+    component: InputResizerComponent
+  },
+  {
+    path: 'input-resizer2',
+    component: InputResizer2Component
   },
   {
     path: 'template-reference',
@@ -56,6 +67,10 @@ const formationRoutes: Routes = [
   {
     path: 'pipe',
     component: PipeComponent
+  },
+  {
+    path: 'material',
+    component: MaterialComponent
   }
 ];
 
