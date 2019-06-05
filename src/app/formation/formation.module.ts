@@ -13,6 +13,7 @@ import {TemplateReferenceComponent} from './template-reference/template-referenc
 import { DirectiveComponent } from './directive/directive.component';
 import {SharedModule} from '../shared/shared.module';
 import { NgForComponent } from './ng-for/ng-for.component';
+import { NgSwitchComponent } from './ng-switch/ng-switch.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { NgForComponent } from './ng-for/ng-for.component';
     NgIfComponent,
     TemplateReferenceComponent,
     DirectiveComponent,
-    NgForComponent
+    NgForComponent,
+    NgSwitchComponent
   ],
   imports: [
     CommonModule,

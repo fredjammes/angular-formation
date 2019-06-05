@@ -1,0 +1,14 @@
+<button (click)="currentValue=values[0]">{{values[0]}}</button>
+<button (click)="currentValue=values[1]">{{values[1]}}</button>
+<button (click)="currentValue=values[2]">{{values[2]}}</button>
+<ng-container [ngSwitch]="currentValue">
+  <ng-container *ngSwitchCase="values[0]">
+    <div [style.background]="'red'">La valeur à afficher est {{values[0]}}</div>
+  </ng-container>
+  <ng-container *ngSwitchCase="values[1]">
+    <div [style.background]="'green'">La valeur à afficher est {{values[1]}}</div>
+  </ng-container>
+  <ng-container *ngSwitchCase="values[2]">
+    <div [style.background]="'blue'">La valeur à afficher est {{values[2]}}</div>
+  </ng-container>
+</ng-container>

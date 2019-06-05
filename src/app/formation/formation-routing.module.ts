@@ -9,6 +9,7 @@ import {NgIfComponent} from './ng-if/ng-if.component';
 import {TemplateReferenceComponent} from './template-reference/template-reference.component';
 import {DirectiveComponent} from './directive/directive.component';
 import {NgForComponent} from './ng-for/ng-for.component';
+import {NgSwitchComponent} from './ng-switch/ng-switch.component';
 
 const formationRoutes: Routes = [
   {
@@ -38,6 +39,10 @@ const formationRoutes: Routes = [
   {
     path: 'ng-for',
     component: NgForComponent
+  },
+  {
+    path: 'ng-switch',
+    component: NgSwitchComponent
   },
   {
     path: 'ng-model',
