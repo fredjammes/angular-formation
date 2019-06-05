@@ -1,0 +1,6 @@
+<button *ngFor="let comp of components" (click)="currentComponent = comp">{{comp}}</button>
+<ng-container [ngSwitch]="currentComponent">
+  <app-ng-if *ngSwitchCase="components[0]"></app-ng-if>
+  <app-ng-for *ngSwitchCase="components[1]"></app-ng-for>
+  <app-ng-switch *ngSwitchCase="components[2]"></app-ng-switch>
+</ng-container>
