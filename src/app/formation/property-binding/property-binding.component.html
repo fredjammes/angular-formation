@@ -2,3 +2,5 @@
 <input id="my-input" type="text" [placeholder]="inputPlaceholder">
 <button [disabled]="isDisabled">My button</button>
 <div [ngClass]="{'square': isSquare, 'red': isSquareRed}"></div>
+<br/>
+<div [class.square]="isSquare" [class.red]="isSquareRed"></div>

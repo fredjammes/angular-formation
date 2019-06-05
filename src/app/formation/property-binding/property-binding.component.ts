@@ -8,6 +8,6 @@ import { Component } from '@angular/core';
 export class PropertyBindingComponent {
   inputPlaceholder = 'Type an awesome text here';
   isDisabled = true;
-  isSquareRed = false;
-  isSquare = false;
+  isSquareRed = true;
+  isSquare = true;
 }
