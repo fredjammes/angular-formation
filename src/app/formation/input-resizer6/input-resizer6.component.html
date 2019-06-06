@@ -1,0 +1,23 @@
+<div>
+  <label for="width-input">Width :</label>
+  <input id="width-input" type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+</div>
+<div>
+  <label for="height-input">Height :</label>
+  <input id="height-input" type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+</div>
+<p>Current Width : {{width}}</p>
+<p>Current Height : {{height}}</p>
+<div style="background-color: black;" [style.height]="heightWithUnit" [style.width]="widthWithUnit"></div>
+<ng-container *ngIf="height > 50 && width > 50; else keepGoing">
+  <p>WOOOOOOOOOOOOOOOOOOO, Trop gros</p>
+</ng-container>
+<ng-template #keepGoing>
+  <p>Monte encore...</p>
+</ng-template>
+<select [(ngModel)]="currentSizeChoiceIndex" (change)="chooseSizeByIndex(currentSizeChoiceIndex)">
+  <option *ngFor="let size of sizes; index as monIndex" [value]="monIndex">w: {{size.width}} x h: {{size.height}}</option>
+</select>
+<select [(ngModel)]="currentSizeChoice" (change)="chooseSize(currentSizeChoice)">
+  <option *ngFor="let size of sizes" [ngValue]="size">w: {{size.width}} x h: {{size.height}}</option>
+</select>

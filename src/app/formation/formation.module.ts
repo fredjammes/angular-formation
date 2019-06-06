@@ -22,6 +22,7 @@ import { InputResizer4Component } from './input-resizer4/input-resizer4.componen
 import { ComponentNgSwitcherComponent } from './component-ng-switcher/component-ng-switcher.component';
 import { InputResizer5Component } from './input-resizer5/input-resizer5.component';
 import { NgModelChangeComponent } from './ng-model-change/ng-model-change.component';
+import { InputResizer6Component } from './input-resizer6/input-resizer6.component';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { NgModelChangeComponent } from './ng-model-change/ng-model-change.compon
     InputResizer4Component,
     ComponentNgSwitcherComponent,
     InputResizer5Component,
-    NgModelChangeComponent
+    NgModelChangeComponent,
+    InputResizer6Component
   ],
   imports: [
     CommonModule,
