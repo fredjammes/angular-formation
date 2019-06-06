@@ -10,4 +10,9 @@ export class PipeComponent {
   start = 2;
   length = 4;
   maDate = new Date();
+  objetComplexe = {
+    nom: 'truc',
+    prenom: 'chose',
+    age: 32
+  };
 }
