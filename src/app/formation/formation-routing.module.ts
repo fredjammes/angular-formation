@@ -15,7 +15,7 @@ import {InputResizerComponent} from './TPs/input-resizer/input-resizer.component
 import {InputResizer2Component} from './TPs/input-resizer2/input-resizer2.component';
 import {InputResizer3Component} from './TPs/input-resizer3/input-resizer3.component';
 import {InputResizer4Component} from './TPs/input-resizer4/input-resizer4.component';
-import {ComponentNgSwitcherComponent} from './Examples/component-ng-switcher/component-ng-switcher.component';
+import {ComponentNgSwitcherComponent} from './TPs/component-ng-switcher/component-ng-switcher.component';
 import {InputResizer5Component} from './TPs/input-resizer5/input-resizer5.component';
 import {NgModelChangeComponent} from './Examples/ng-model-change/ng-model-change.component';
 import {InputResizer6Component} from './TPs/input-resizer6/input-resizer6.component';
