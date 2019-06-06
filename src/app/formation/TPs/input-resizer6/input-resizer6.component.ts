@@ -31,7 +31,7 @@ export class InputResizer6Component {
     }
   ];
 
-  private unit = 'px';
+  public unit = 'px';
 
   public chooseSizeByIndex(sizeIndex: number) {
     this.onWidthChange(this.sizes[sizeIndex].width);

@@ -31,8 +31,8 @@ export class InputResizer7Component {
       height: 200
     }
   ];
-
-  private unit = 'px';
+  public units: string[] = ['px', 'em'];
+  public currentUnit = this.units[0];
 
   public chooseSizeByIndex(sizeIndex: number) {
     this.onWidthChange(this.sizes[sizeIndex].width);
@@ -46,11 +46,11 @@ export class InputResizer7Component {
 
   public onWidthChange(width: number): void {
     this.width = width;
-    this.widthWithUnit = width + this.unit;
+    this.widthWithUnit = width + this.currentUnit;
   }
 
   public onHeightChange(height): void {
     this.height = height;
-    this.heightWithUnit = height + this.unit;
+    this.heightWithUnit = height + this.currentUnit;
   }
 }
