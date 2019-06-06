@@ -11,7 +11,7 @@ export class NgModelChangeComponent {
   transformText(textFromInput: string) {
     // Si on ne remet pas textFromInput dans this.typedText, alors, typedText ne change jamais !
     // Penser à refaire l'assignation suivante si nécessaire
-    // this.typedText = textFromInput
+    // this.typedText = textFromInput;
     this.transformedText = textFromInput.padStart(25, '*').padEnd(50, '*');
   }
 }
