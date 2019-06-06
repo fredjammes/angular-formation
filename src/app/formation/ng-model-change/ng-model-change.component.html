@@ -1,0 +1,5 @@
+<section>
+  <input type="text" [ngModel]="typedText" (ngModelChange)="transformText($event)"/>
+  <p>Vous avez saisi : {{typedText}}</p>
+  <p>Il a été transformé en : {{transformedText}}</p>
+</section>

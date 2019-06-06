@@ -17,6 +17,7 @@ import {InputResizer3Component} from './input-resizer3/input-resizer3.component'
 import {InputResizer4Component} from './input-resizer4/input-resizer4.component';
 import {ComponentNgSwitcherComponent} from './component-ng-switcher/component-ng-switcher.component';
 import {InputResizer5Component} from './input-resizer5/input-resizer5.component';
+import {NgModelChangeComponent} from './ng-model-change/ng-model-change.component';
 
 const formationRoutes: Routes = [
   {
@@ -78,6 +79,10 @@ const formationRoutes: Routes = [
   {
     path: 'ng-model',
     component: NgModelComponent
+  },
+  {
+    path: 'ng-model-change',
+    component: NgModelChangeComponent
   },
   {
     path: 'directive',
