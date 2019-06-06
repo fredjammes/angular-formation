@@ -2,11 +2,12 @@ import {Component} from '@angular/core';
 import {Size} from '../input-resizer5/input-resizer5.component';
 
 @Component({
-  selector: 'app-input-resizer6',
-  templateUrl: './input-resizer6.component.html',
-  styleUrls: ['./input-resizer6.component.scss']
+  selector: 'app-input-resizer7',
+  templateUrl: './input-resizer7.component.html',
+  styleUrls: ['./input-resizer7.component.scss']
 })
-export class InputResizer6Component {
+export class InputResizer7Component {
+  public dateDuJour: Date = new Date();
   public currentSizeChoiceIndex: number;
   public currentSizeChoice: Size;
   public height: number;
