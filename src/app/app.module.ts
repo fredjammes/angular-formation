@@ -1,4 +1,3 @@
-import {BrowserModule} from '@angular/platform-browser';
 import {LOCALE_ID, NgModule} from '@angular/core';
 import localeFr from '@angular/common/locales/fr';
 
@@ -11,6 +10,7 @@ import {RouterModule} from '@angular/router';
 import {IntroComponent} from './intro/intro.component';
 import {registerLocaleData} from '@angular/common';
 import {CoreModule} from './core/core.module';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [
@@ -18,9 +18,9 @@ import {CoreModule} from './core/core.module';
     IntroComponent
   ],
   imports: [
-    BrowserModule,
-    AppRoutingModule,
     CoreModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
     FormationModule,
     RouterModule
   ],

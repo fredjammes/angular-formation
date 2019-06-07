@@ -11,17 +11,13 @@
       </mat-option>
     </mat-select>
   </mat-form-field>
-</section>
-<section *ngIf="currentTrainee">
-  <p>
+  <ng-container *ngIf="currentTrainee">
     <mat-form-field>
       <mat-label>Choisissez une unité:</mat-label>
       <mat-select [(ngModel)]="currentUnit" (ngModelChange)="chooseSize(currentSizeChoice)">
         <mat-option *ngFor="let unit of units" [value]="unit">{{unit}}</mat-option>
       </mat-select>
     </mat-form-field>
-  </p>
-  <p>
     <mat-form-field>
       <mat-label>Choisissez une taille de carré ou saisissez la:</mat-label>
       <mat-select [(ngModel)]="currentSizeChoice" (ngModelChange)="chooseSize(currentSizeChoice)">
@@ -29,23 +25,19 @@
                     [value]="size">{{size | sizeLabel:currentUnit}}</mat-option>
       </mat-select>
     </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <mat-label>Width :</mat-label>
-      <input matInput type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
-    </mat-form-field>
-  </p>
-  <p>
-    <mat-form-field>
-      <mat-label >Height :</mat-label>
-      <input matInput type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
-    </mat-form-field>
-  </p>
+    <p>
+      <mat-form-field>
+        <mat-label>Width :</mat-label>
+        <input matInput type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+      </mat-form-field>
+      <mat-form-field>
+        <mat-label>Height :</mat-label>
+        <input matInput type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+      </mat-form-field>
+    </p>
+  </ng-container>
 </section>
-<section *ngIf="currentSizeChoice">
-  <p>Current Width : {{width}}</p>
-  <p>Current Height : {{height}}</p>
+<section *ngIf="width && height">
   <div style="background-color: black;" [style.height]="heightWithUnit" [style.width]="widthWithUnit"></div>
   <ng-container *ngIf="height > 50 && width > 50; else keepGoing">
     <p>WOOOOOOOOOOOOOOOOOOO, Trop gros</p>
