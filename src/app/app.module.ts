@@ -18,8 +18,8 @@ import {CoreModule} from './core/core.module';
     IntroComponent
   ],
   imports: [
-    AppRoutingModule,
     BrowserModule,
+    AppRoutingModule,
     CoreModule,
     FormationModule,
     RouterModule

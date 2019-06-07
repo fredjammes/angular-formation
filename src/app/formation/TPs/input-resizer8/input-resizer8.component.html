@@ -3,31 +3,44 @@
   <p>Date et heure à New York : {{dateDuJour | date:'long':'GMT-4':'fr-FR'}}</p>
 </div>
 <section *ngIf="trainees">
-  <label for="trainee">Choisissez un utilisateur: </label>
-  <select id="trainee" [(ngModel)]="currentTrainee">
-    <option *ngFor="let trainee of trainees" [ngValue]="trainee">{{trainee.firstname}} {{trainee.name}}</option>
-  </select>
+  <mat-form-field>
+    <mat-label>Choisissez un utilisateur:</mat-label>
+    <mat-select [(ngModel)]="currentTrainee">
+      <mat-option *ngFor="let trainee of trainees" [value]="trainee">
+        {{trainee.firstname + ' ' + trainee.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
 </section>
 <section *ngIf="currentTrainee">
   <p>
-    <label for="unit">Choisissez une unité: </label>
-    <select id="unit" [(ngModel)]="currentUnit" (change)="chooseSize(currentSizeChoice)">
-      <option *ngFor="let unit of units">{{unit}}</option>
-    </select>
+    <mat-form-field>
+      <mat-label>Choisissez une unité:</mat-label>
+      <mat-select [(ngModel)]="currentUnit" (ngModelChange)="chooseSize(currentSizeChoice)">
+        <mat-option *ngFor="let unit of units" [value]="unit">{{unit}}</mat-option>
+      </mat-select>
+    </mat-form-field>
   </p>
   <p>
-    <label for="sizes">Choisissez une taille de carré ou saisissez la: </label>
-    <select id="sizes" [(ngModel)]="currentSizeChoice" (change)="chooseSize(currentSizeChoice)">
-      <option *ngFor="let size of currentTrainee.sizes" [ngValue]="size">{{size | sizeLabel:currentUnit}}</option>
-    </select>
+    <mat-form-field>
+      <mat-label>Choisissez une taille de carré ou saisissez la:</mat-label>
+      <mat-select [(ngModel)]="currentSizeChoice" (ngModelChange)="chooseSize(currentSizeChoice)">
+        <mat-option *ngFor="let size of currentTrainee.sizes"
+                    [value]="size">{{size | sizeLabel:currentUnit}}</mat-option>
+      </mat-select>
+    </mat-form-field>
   </p>
   <p>
-    <label for="width-input">Width :</label>
-    <input id="width-input" type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+    <mat-form-field>
+      <mat-label>Width :</mat-label>
+      <input matInput type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+    </mat-form-field>
   </p>
   <p>
-    <label for="height-input">Height :</label>
-    <input id="height-input" type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+    <mat-form-field>
+      <mat-label >Height :</mat-label>
+      <input matInput type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+    </mat-form-field>
   </p>
 </section>
 <section *ngIf="currentSizeChoice">

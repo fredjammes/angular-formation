@@ -19,8 +19,8 @@ export class TraineeWebService implements TraineeService {
       this.http.get<TraineeWeb[]>('trainees'),
       this.http.get<Size[]>('sizes')
     ]).pipe(
-        map(([trainees, sizes]: [TraineeWeb[], Size[]]) => {
-          return trainees.map(trainee => TraineeWebMapper.mapTo(trainee, sizes));
+        map(([traineesWeb, sizes]: [TraineeWeb[], Size[]]) => {
+          return traineesWeb.map(traineeWeb => TraineeWebMapper.mapTo(traineeWeb, sizes));
         })
     );
   }

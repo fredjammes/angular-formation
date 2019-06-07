@@ -58,7 +58,7 @@ import { InputResizer8Component } from './TPs/input-resizer8/input-resizer8.comp
     FormationRoutingModule,
     RouterModule,
     FormsModule,
-    SharedModule
+    SharedModule,
   ],
   providers: [
     {
