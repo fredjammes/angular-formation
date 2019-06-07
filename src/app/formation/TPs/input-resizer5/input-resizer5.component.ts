@@ -1,10 +1,5 @@
 import { Component } from '@angular/core';
-
-export interface Size {
-  id: number;
-  width: number;
-  height: number;
-}
+import {Size} from '../../shared/trainee/size';
 
 @Component({
   selector: 'app-input-resizer5',

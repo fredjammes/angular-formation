@@ -20,6 +20,7 @@ import {InputResizer5Component} from './TPs/input-resizer5/input-resizer5.compon
 import {NgModelChangeComponent} from './Examples/ng-model-change/ng-model-change.component';
 import {InputResizer6Component} from './TPs/input-resizer6/input-resizer6.component';
 import {InputResizer7Component} from './TPs/input-resizer7/input-resizer7.component';
+import {InputResizer8Component} from './TPs/input-resizer8/input-resizer8.component';
 
 const formationRoutes: Routes = [
   {
@@ -65,6 +66,10 @@ const formationRoutes: Routes = [
   {
     path: 'input-resizer7',
     component: InputResizer7Component
+  },
+  {
+    path: 'input-resizer8',
+    component: InputResizer8Component
   },
   {
     path: 'template-reference',

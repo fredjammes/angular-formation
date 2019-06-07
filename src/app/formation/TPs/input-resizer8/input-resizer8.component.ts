@@ -1,14 +1,15 @@
-import {Component} from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import {Trainee} from '../../shared/trainee/trainee';
+import {TraineeService} from '../../shared/trainee/trainee.service';
 import {Size} from '../../shared/trainee/size';
 
 @Component({
-  selector: 'app-input-resizer7',
-  templateUrl: './input-resizer7.component.html',
-  styleUrls: ['./input-resizer7.component.scss']
+  selector: 'app-input-resizer8',
+  templateUrl: './input-resizer8.component.html',
+  styleUrls: ['./input-resizer8.component.scss']
 })
-export class InputResizer7Component {
+export class InputResizer8Component implements OnInit {
   public dateDuJour: Date = new Date();
-  public currentSizeChoiceIndex: number;
   public currentSizeChoice: Size;
   public height: number;
   public heightWithUnit: string;
@@ -33,10 +34,18 @@ export class InputResizer7Component {
   ];
   public units: string[] = ['px', 'em'];
   public currentUnit = this.units[0];
+  public trainees: Trainee[];
 
-  public chooseSizeByIndex(sizeIndex: number) {
-    this.onWidthChange(this.sizes[sizeIndex].width);
-    this.onHeightChange(this.sizes[sizeIndex].height);
+  public currentTrainee: Trainee;
+
+  constructor(
+    private traineeService: TraineeService
+  ) {
+  }
+
+  public ngOnInit(): void {
+    this.traineeService.getTrainees()
+      .subscribe(receivedTrainees => this.trainees = receivedTrainees);
   }
 
   public chooseSize(size: Size) {

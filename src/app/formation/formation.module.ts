@@ -24,6 +24,9 @@ import { InputResizer5Component } from './TPs/input-resizer5/input-resizer5.comp
 import { NgModelChangeComponent } from './Examples/ng-model-change/ng-model-change.component';
 import { InputResizer6Component } from './TPs/input-resizer6/input-resizer6.component';
 import { InputResizer7Component } from './TPs/input-resizer7/input-resizer7.component';
+import {TraineeService} from './shared/trainee/trainee.service';
+import {TraineeWebService} from './shared/trainee/trainee-web.service';
+import { InputResizer8Component } from './TPs/input-resizer8/input-resizer8.component';
 
 
 @NgModule({
@@ -47,7 +50,8 @@ import { InputResizer7Component } from './TPs/input-resizer7/input-resizer7.comp
     InputResizer5Component,
     NgModelChangeComponent,
     InputResizer6Component,
-    InputResizer7Component
+    InputResizer7Component,
+    InputResizer8Component
   ],
   imports: [
     CommonModule,
@@ -55,6 +59,12 @@ import { InputResizer7Component } from './TPs/input-resizer7/input-resizer7.comp
     RouterModule,
     FormsModule,
     SharedModule
+  ],
+  providers: [
+    {
+      provide: TraineeService,
+      useClass: TraineeWebService
+    }
   ]
 })
 export class FormationModule {

@@ -1,0 +1,43 @@
+<div>
+  <p>Date et heure à Paris : {{dateDuJour | date:'yyyy/MM/dd hh:mm:ss'}}</p>
+  <p>Date et heure à New York : {{dateDuJour | date:'long':'GMT-4':'fr-FR'}}</p>
+</div>
+<section *ngIf="trainees">
+  <label for="trainee">Choisissez un utilisateur: </label>
+  <select id="trainee" [(ngModel)]="currentTrainee">
+    <option *ngFor="let trainee of trainees" [ngValue]="trainee">{{trainee.firstname}} {{trainee.name}}</option>
+  </select>
+</section>
+<section *ngIf="currentTrainee">
+  <p>
+    <label for="unit">Choisissez une unité: </label>
+    <select id="unit" [(ngModel)]="currentUnit" (change)="chooseSize(currentSizeChoice)">
+      <option *ngFor="let unit of units">{{unit}}</option>
+    </select>
+  </p>
+  <p>
+    <label for="sizes">Choisissez une taille de carré ou saisissez la: </label>
+    <select id="sizes" [(ngModel)]="currentSizeChoice" (change)="chooseSize(currentSizeChoice)">
+      <option *ngFor="let size of currentTrainee.sizes" [ngValue]="size">{{size | sizeLabel:currentUnit}}</option>
+    </select>
+  </p>
+  <p>
+    <label for="width-input">Width :</label>
+    <input id="width-input" type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+  </p>
+  <p>
+    <label for="height-input">Height :</label>
+    <input id="height-input" type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+  </p>
+</section>
+<section *ngIf="currentSizeChoice">
+  <p>Current Width : {{width}}</p>
+  <p>Current Height : {{height}}</p>
+  <div style="background-color: black;" [style.height]="heightWithUnit" [style.width]="widthWithUnit"></div>
+  <ng-container *ngIf="height > 50 && width > 50; else keepGoing">
+    <p>WOOOOOOOOOOOOOOOOOOO, Trop gros</p>
+  </ng-container>
+  <ng-template #keepGoing>
+    <p>Monte encore...</p>
+  </ng-template>
+</section>

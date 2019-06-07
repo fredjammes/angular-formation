@@ -1,11 +1,16 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
+import localeFr from '@angular/common/locales/fr';
+
+registerLocaleData(localeFr);
 
 import {AppComponent} from './app.component';
 import {FormationModule} from './formation/formation.module';
 import {AppRoutingModule} from './app-routing.module';
 import {RouterModule} from '@angular/router';
-import { IntroComponent } from './intro/intro.component';
+import {IntroComponent} from './intro/intro.component';
+import {registerLocaleData} from '@angular/common';
+import {CoreModule} from './core/core.module';
 
 @NgModule({
   declarations: [
@@ -13,12 +18,15 @@ import { IntroComponent } from './intro/intro.component';
     IntroComponent
   ],
   imports: [
-    BrowserModule,
-    FormationModule,
     AppRoutingModule,
+    BrowserModule,
+    CoreModule,
+    FormationModule,
     RouterModule
   ],
-  providers: [],
+  providers: [
+    { provide: LOCALE_ID, useValue: 'fr-FR' }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule {

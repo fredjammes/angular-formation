@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {Size} from '../input-resizer5/input-resizer5.component';
+import {Size} from '../../shared/trainee/size';
 
 @Component({
   selector: 'app-input-resizer6',

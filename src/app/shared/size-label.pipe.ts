@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import {Size} from '../formation/TPs/input-resizer5/input-resizer5.component';
+import {Size} from '../formation/shared/trainee/size';
 
 @Pipe({
   name: 'sizeLabel'
