@@ -1,3 +1,7 @@
+<h2>
+  En reprenant l'exercice précédent, ajouter un texte indiquant que la div n'est ni assez large,
+  ni assez longue, lorsque sa largeur et sa longueur est inférieure à 50, et un autre texte une fois qu'on est assez long et large.
+</h2>
 <div>
   <label for="width-input">Width :</label>
   <input id="width-input" type="number" (change)="resize(widthInput.valueAsNumber, heightInput.valueAsNumber)" #widthInput>
@@ -9,7 +13,7 @@
 
 <div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>
 <ng-container *ngIf="height > 50 && width > 50; else keepGoing">
-  <p>WOOOOOOOOOOOOOOOOOOO, Trop gros</p>
+  <p>Ahhhhh maintenant on est bien</p>
 </ng-container>
 <ng-template #keepGoing>
   <p>Monte encore...</p>
