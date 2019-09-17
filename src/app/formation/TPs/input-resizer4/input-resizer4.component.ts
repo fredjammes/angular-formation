@@ -33,8 +33,10 @@ export class InputResizer4Component {
   }
 
   public chooseSize(event: Event) {
-    this.width = this.sizes[(event.target as HTMLSelectElement).value].width;
-    this.height = this.sizes[(event.target as HTMLSelectElement).value].height;
+    if (event.target && (event.target as HTMLSelectElement).value) {
+      this.width = this.sizes[(event.target as HTMLSelectElement).value].width;
+      this.height = this.sizes[(event.target as HTMLSelectElement).value].height;
+    }
   }
 
 }
