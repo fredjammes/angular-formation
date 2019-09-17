@@ -17,5 +17,5 @@ export class NgModelComponent {
     {id: 2, label: 'troisième option'},
   ];
   selectedValue;
-  selectedNgValue;
+  selectedObject;
 }

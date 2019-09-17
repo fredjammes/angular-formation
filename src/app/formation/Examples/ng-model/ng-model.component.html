@@ -15,8 +15,8 @@
   <span> Option selectionnée : {{selectedValue}}</span>
 </section>
 <section>
-  <select [(ngModel)]="selectedNgValue">
+  <select [(ngModel)]="selectedObject">
     <option *ngFor="let option of options" [ngValue]="option">{{option.label}}</option>
   </select>
-  <span> label selectionné : {{selectedNgValue?.label}} | id selectionné : {{selectedNgValue?.id}}</span>
+  <span> label selectionné : {{selectedObject?.label}} | id selectionné : {{selectedObject?.id}}</span>
 </section>
