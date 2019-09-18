@@ -1,5 +1,5 @@
-<section>
-  <nav>
+<button (click)="toggleMenu()">{{isMenuShown ? 'Hide' : 'Show'}} Menu</button>
+<nav *ngIf="isMenuShown">
     <table>
       <thead>
       <tr>
@@ -8,87 +8,95 @@
       </tr>
       </thead>
       <tbody>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./interpolation']">Interpolation</a></p>
-            <p><a [routerLink]="['./property-binding']">Property Binding</a></p>
-            <p><a [routerLink]="['./event-binding']">Event Binding</a></p>
-          </td>
-          <td>
-            <a [routerLink]="['./input-resizer']">TP : Input Resizer</a>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./template-reference']">Template Reference Variable</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer2']">TP : Input Resizer 2</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./ng-if']">ngIf</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer3']">TP : Input Resizer 3</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./ng-for']">ngFor</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer4']">TP : Input Resizer 4</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./ng-switch']">ngSwitch</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./component-ng-switcher']">TP : component NgSwitch...er</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./ng-model']">ngModel</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer5']">TP : Input Resizer 5</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./ng-model-change']">ngModelChange</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer6']">TP : Input Resizer 6</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./pipe']">pipe</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer7']">TP: Input Resizer 7</a></p>
-          </td>
-        </tr>
-        <tr>
-          <td>
-            <p><a [routerLink]="['./directive']">directive</a></p>
-          </td>
-          <td></td>
-        </tr>
-        <tr>
-          <td>
-            <p><a>service(TODO)</a></p>
-          </td>
-          <td>
-            <p><a [routerLink]="['./input-resizer8']">TP: Input Resizer 8</a></p>
-          </td>
-        </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./interpolation')">Interpolation</a></p>
+          <p><a (click)="goToPage('./property-binding')">Property Binding</a></p>
+          <p><a (click)="goToPage('./event-binding')">Event Binding</a></p>
+        </td>
+        <td>
+          <a (click)="goToPage('./input-resizer')">TP : Input Resizer</a>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./template-reference')">Template Reference Variable</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer2')">TP : Input Resizer 2</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./ng-if')">ngIf</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer3')">TP : Input Resizer 3</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./ng-for')">ngFor</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer4')">TP : Input Resizer 4</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./ng-switch')">ngSwitch</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./component-ng-switcher')">TP : component NgSwitch...er</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./ng-model')">ngModel</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer5')">TP : Input Resizer 5</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./ng-model-change')">ngModelChange</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer6')">TP : Input Resizer 6</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./pipe')">pipe</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer7')">TP: Input Resizer 7</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./directive')">directive</a></p>
+        </td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>
+          <p><a>service(TODO)</a></p>
+        </td>
+        <td>
+          <p><a (click)="goToPage('./input-resizer8')">TP: Input Resizer 8</a></p>
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <p><a (click)="goToPage('./template-driven-form')">Template Driven Form</a></p>
+        </td>
+      </tr>
       </tbody>
     </table>
   </nav>
-</section>
+
+<main>
+  <router-outlet></router-outlet>
+</main>

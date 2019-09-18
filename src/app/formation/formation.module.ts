@@ -27,7 +27,7 @@ import { InputResizer7Component } from './TPs/input-resizer7/input-resizer7.comp
 import {TraineeService} from './shared/trainee/trainee.service';
 import {TraineeWebService} from './shared/trainee/trainee-web.service';
 import { InputResizer8Component } from './TPs/input-resizer8/input-resizer8.component';
-import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { TemplateDrivenFormComponent } from './Examples/template-driven-form/template-driven-form.component';
 
 
 @NgModule({
@@ -52,7 +52,8 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
     NgModelChangeComponent,
     InputResizer6Component,
     InputResizer7Component,
-    InputResizer8Component
+    InputResizer8Component,
+    TemplateDrivenFormComponent
   ],
   imports: [
     CommonModule,

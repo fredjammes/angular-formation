@@ -1,0 +1,30 @@
+<form (ngSubmit)="send()" #exampleForm="ngForm" class="example-form">
+  <mat-form-field class="example-full-width">
+    <input name="name" placeholder="Enter you name here" matInput type="text" [(ngModel)]="name" required #nameInput="ngModel">
+  </mat-form-field>
+  <div [hidden]="nameInput.valid || nameInput.pristine">
+    Name is required
+  </div>
+  <mat-form-field class="example-full-width">
+    <input name="firstname" placeholder="Enter you firstname here" matInput type="text" [(ngModel)]="firstname" required #firstnameInput="ngModel">
+  </mat-form-field>
+  <div [hidden]="firstnameInput.valid || firstnameInput.pristine">
+    Firstname is required
+  </div>
+  <mat-form-field class="example-full-width">
+    <input name="age" placeholder="Enter you age here" matInput type="number" [(ngModel)]="age" required #ageInput="ngModel">
+  </mat-form-field>
+  <div [hidden]="ageInput.valid || ageInput.pristine">
+    {{ageInput.errors | json}}
+    Age is invalid
+  </div>
+  <mat-form-field class="example-full-width">
+    <input name="email" placeholder="Enter you email here" matInput type="email" [(ngModel)]="email" required email="true" #emailInput="ngModel">
+  </mat-form-field>
+  <div [hidden]="emailInput.valid || emailInput.pristine">
+    <span *ngIf="emailInput.errors['email']">Enter a valid email</span>
+    <span *ngIf="emailInput.errors['required']">Email is required</span>
+  </div>
+  <button type="submit" [disabled]="!exampleForm.form.valid">Submit</button>
+  <button type="button" (click)="exampleForm.reset()">ResetForm</button>
+</form>

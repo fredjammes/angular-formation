@@ -21,91 +21,98 @@ import {NgModelChangeComponent} from './Examples/ng-model-change/ng-model-change
 import {InputResizer6Component} from './TPs/input-resizer6/input-resizer6.component';
 import {InputResizer7Component} from './TPs/input-resizer7/input-resizer7.component';
 import {InputResizer8Component} from './TPs/input-resizer8/input-resizer8.component';
+import {TemplateDrivenFormComponent} from './Examples/template-driven-form/template-driven-form.component';
 
 const formationRoutes: Routes = [
   {
     path: '',
-    component: FormationComponent
-  },
-  {
-    path: 'interpolation',
-    component: InterpolationComponent
-  },
-  {
-    path: 'property-binding',
-    component: PropertyBindingComponent
-  },
-  {
-    path: 'event-binding',
-    component: EventBindingComponent
-  },
-  {
-    path: 'input-resizer',
-    component: InputResizerComponent
-  },
-  {
-    path: 'input-resizer2',
-    component: InputResizer2Component
-  },
-  {
-    path: 'input-resizer3',
-    component: InputResizer3Component
-  },
-  {
-    path: 'input-resizer4',
-    component: InputResizer4Component
-  },
-  {
-    path: 'input-resizer5',
-    component: InputResizer5Component
-  },
-  {
-    path: 'input-resizer6',
-    component: InputResizer6Component
-  },
-  {
-    path: 'input-resizer7',
-    component: InputResizer7Component
-  },
-  {
-    path: 'input-resizer8',
-    component: InputResizer8Component
-  },
-  {
-    path: 'template-reference',
-    component: TemplateReferenceComponent
-  },
-  {
-    path: 'ng-if',
-    component: NgIfComponent
-  },
-  {
-    path: 'ng-for',
-    component: NgForComponent
-  },
-  {
-    path: 'ng-switch',
-    component: NgSwitchComponent
-  },
-  {
-    path: 'component-ng-switcher',
-    component: ComponentNgSwitcherComponent
-  },
-  {
-    path: 'ng-model',
-    component: NgModelComponent
-  },
-  {
-    path: 'ng-model-change',
-    component: NgModelChangeComponent
-  },
-  {
-    path: 'directive',
-    component: DirectiveComponent
-  },
-  {
-    path: 'pipe',
-    component: PipeComponent
+    component: FormationComponent,
+    children: [
+      {
+        path: 'interpolation',
+        component: InterpolationComponent
+      },
+      {
+        path: 'property-binding',
+        component: PropertyBindingComponent
+      },
+      {
+        path: 'event-binding',
+        component: EventBindingComponent
+      },
+      {
+        path: 'input-resizer',
+        component: InputResizerComponent
+      },
+      {
+        path: 'input-resizer2',
+        component: InputResizer2Component
+      },
+      {
+        path: 'input-resizer3',
+        component: InputResizer3Component
+      },
+      {
+        path: 'input-resizer4',
+        component: InputResizer4Component
+      },
+      {
+        path: 'input-resizer5',
+        component: InputResizer5Component
+      },
+      {
+        path: 'input-resizer6',
+        component: InputResizer6Component
+      },
+      {
+        path: 'input-resizer7',
+        component: InputResizer7Component
+      },
+      {
+        path: 'input-resizer8',
+        component: InputResizer8Component
+      },
+      {
+        path: 'template-reference',
+        component: TemplateReferenceComponent
+      },
+      {
+        path: 'ng-if',
+        component: NgIfComponent
+      },
+      {
+        path: 'ng-for',
+        component: NgForComponent
+      },
+      {
+        path: 'ng-switch',
+        component: NgSwitchComponent
+      },
+      {
+        path: 'component-ng-switcher',
+        component: ComponentNgSwitcherComponent
+      },
+      {
+        path: 'ng-model',
+        component: NgModelComponent
+      },
+      {
+        path: 'ng-model-change',
+        component: NgModelChangeComponent
+      },
+      {
+        path: 'directive',
+        component: DirectiveComponent
+      },
+      {
+        path: 'pipe',
+        component: PipeComponent
+      },
+      {
+        path: 'template-driven-form',
+        component: TemplateDrivenFormComponent
+      }
+    ]
   }
 ];
 

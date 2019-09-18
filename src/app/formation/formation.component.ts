@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {Router} from '@angular/router';
 
 @Component({
   templateUrl: 'formation.component.html',
@@ -6,5 +7,17 @@ import {Component} from '@angular/core';
 })
 
 export class FormationComponent {
+  isMenuShown = false;
 
+  constructor(
+    private router: Router
+  ) {}
+
+  toggleMenu(): void {
+    this.isMenuShown = !this.isMenuShown;
+  }
+  goToPage(page: string) {
+    this.isMenuShown = false;
+    this.router.navigate([page]);
+  }
 }
