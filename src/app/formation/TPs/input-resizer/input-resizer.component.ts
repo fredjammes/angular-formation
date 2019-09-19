@@ -18,6 +18,6 @@ export class InputResizerComponent {
   }
 
   public setWidth(focusEvent: Event) {
-    this.width = Number((focusEvent.target  as HTMLInputElement).value);
+    this.width = Number((focusEvent.target as HTMLInputElement).value);
   }
 }

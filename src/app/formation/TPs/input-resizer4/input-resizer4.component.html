@@ -1,5 +1,8 @@
 <h2>
   En reprenant l'exercice précédent, ajouter un select permettant de choisir des tailles de div prédéfini
+  <br/>
+  Le type du tableau d'objet est le suivant :
+  sizes: {{'{'}}id: number, width: number, height: number}[]
 </h2>
 <div>
   <label for="width-input">Width :</label>
@@ -11,13 +14,21 @@
 </div>
 
 <div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>
-<ng-container *ngIf="height > 50 && width > 50; else keepGoing">
+<ng-container *ngIf="isBigEnough; else keepGoing">
   <p>Ahhhhh maintenant on est bien</p>
 </ng-container>
 <ng-template #keepGoing>
   <p>Monte encore...</p>
 </ng-template>
-<select (change)="chooseSize($event)">
+<select (change)="chooseSizeByIndex($event.target.value)">
   <option value=""> - </option>
-  <option *ngFor="let size of sizes; index as monIndex" [value]="monIndex">w: {{size.width}} x h: {{size.height}}</option>
+  <ng-container *ngFor="let size of sizes; index as monIndex">
+    <option [value]="monIndex">w: {{size.width}} x h: {{size.height}}</option>
+  </ng-container>
+</select>
+<select (change)="chooseSizeById($event.target.value)">
+  <option value=""> - </option>
+  <ng-container *ngFor="let size of sizes">
+    <option [value]="size.id">w: {{size.width}} x h: {{size.height}}</option>
+  </ng-container>
 </select>

@@ -2,6 +2,7 @@ import {Component} from '@angular/core';
 import {Router} from '@angular/router';
 
 @Component({
+  selector: 'formation',
   templateUrl: 'formation.component.html',
   styleUrls: ['formation.component.scss']
 })

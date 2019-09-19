@@ -9,9 +9,10 @@ export class InputResizer4Component {
 
   public height: number;
   public width: number;
+  public isBigEnough: boolean;
   public sizes: { id: number, width: number, height: number }[] = [
     {
-      id: 0,
+      id: 129,
       width: 100,
       height: 100
     },
@@ -30,13 +31,15 @@ export class InputResizer4Component {
   public resize(width: number, height: number): void {
     this.width = width;
     this.height = height;
+    this.isBigEnough = this.width > 50 && this.height > 50;
   }
 
-  public chooseSize(event: Event) {
-    if (event.target && (event.target as HTMLSelectElement).value) {
-      this.width = this.sizes[(event.target as HTMLSelectElement).value].width;
-      this.height = this.sizes[(event.target as HTMLSelectElement).value].height;
-    }
+  public chooseSizeById(currentSizeId: number) {
+      const currentSize = this.sizes.find(size => size.id === Number(currentSizeId));
+      this.resize(currentSize.width, currentSize.height);
+  }
+  public chooseSizeByIndex(index: number) {
+    this.resize(this.sizes[index].width, this.sizes[index].height);
   }
 
 }

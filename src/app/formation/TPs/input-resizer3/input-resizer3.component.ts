@@ -8,9 +8,11 @@ import { Component } from '@angular/core';
 export class InputResizer3Component {
   public height: number;
   public width: number;
+  public isBigEnough: boolean;
 
   public resize(width: number, height: number): void {
     this.width = width;
     this.height = height;
+    this.isBigEnough = this.width > 50 && this.height > 50;
   }
 }

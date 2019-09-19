@@ -12,7 +12,7 @@
 </div>
 
 <div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>
-<ng-container *ngIf="height > 50 && width > 50; else keepGoing">
+<ng-container *ngIf="isBigEnough; else keepGoing">
   <p>Ahhhhh maintenant on est bien</p>
 </ng-container>
 <ng-template #keepGoing>

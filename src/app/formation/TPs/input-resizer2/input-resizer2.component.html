@@ -10,4 +10,4 @@
   <label for="height-input">Height :</label>
   <input id="height-input" type="number" (change)="resize(widthInput.valueAsNumber, heightInput.valueAsNumber)" #heightInput>
 </div>
-<div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>
+<div style="background-color: black;" [style.height]="heightInput.value + 'px'" [style.width]="widthInput.value + 'px'"></div>
