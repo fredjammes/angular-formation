@@ -11,6 +11,7 @@ export class InputResizer5Component {
   public currentSizeChoice: Size;
   public height: number;
   public width: number;
+  public isBigEnough: boolean;
   public sizes: Size[] = [
     {
       id: 0,
@@ -36,5 +37,9 @@ export class InputResizer5Component {
   public chooseSize(size: Size) {
     this.width = size.width;
     this.height = size.height;
+  }
+
+  public updateIsBeEnough() {
+    this.isBigEnough = this.height > 50 && this.width > 50;
   }
 }

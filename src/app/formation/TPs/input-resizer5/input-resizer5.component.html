@@ -5,15 +5,15 @@
 </h2>
 <div>
   <label for="width-input">Width :</label>
-  <input id="width-input" type="number" [(ngModel)]="width">
+  <input id="width-input" type="number" [(ngModel)]="width" (ngModelChange)="updateIsBeEnough()">
 </div>
 <div>
   <label for="height-input">Height :</label>
-  <input id="height-input" type="number" [(ngModel)]="height">
+  <input id="height-input" type="number" [(ngModel)]="height" (ngModelChange)="updateIsBeEnough()">
 </div>
 
 <div style="background-color: black;" [style.height]="height + 'px'" [style.width]="width + 'px'"></div>
-<ng-container *ngIf="height > 50 && width > 50; else keepGoing">
+<ng-container *ngIf="isBigEnough; else keepGoing">
   <p>Ahhhhh maintenant on est bien</p>
 </ng-container>
 <ng-template #keepGoing>
