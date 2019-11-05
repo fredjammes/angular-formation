@@ -9,10 +9,10 @@ export class PipeComponent {
   maVariable = 'Super text';
   start = 2;
   length = 4;
-  maDate = new Date();
   objetComplexe = {
     nom: 'truc',
     prenom: 'chose',
     age: 32
   };
+  pairNumbers: number[] = [0, 1, 2, 3, 4, 5];
 }

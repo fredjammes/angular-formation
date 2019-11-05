@@ -6,8 +6,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./ng-switch.component.scss']
 })
 export class NgSwitchComponent {
-
   values: string[] = ['0', '1', '2'];
   currentValue = this.values[0];
-
 }
