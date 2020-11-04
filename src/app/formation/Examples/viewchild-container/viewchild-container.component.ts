@@ -8,7 +8,7 @@ import {InteractionLocalvarPresentationComponent} from '../interaction-localvar-
 })
 export class ViewchildContainerComponent {
 
-  @ViewChild(InteractionLocalvarPresentationComponent, {static: false}) childComp: InteractionLocalvarPresentationComponent;
+  @ViewChild(InteractionLocalvarPresentationComponent) childComp: InteractionLocalvarPresentationComponent;
 
   public wakeUpMyChild() {
     this.childComp.wakeUp();
