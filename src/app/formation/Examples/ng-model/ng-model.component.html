@@ -9,10 +9,10 @@
   ==> Valeur(s) selectionnée(s) : Valeur 1 : {{isValue1Checked}} | Valeur 2 : {{isValue2Checked}} | Valeur 3 : {{isValue3Checked}}
 </section>
 <section>
-  <select [(ngModel)]="selectedValue">
+  <select [(ngModel)]="selectedId">
     <option *ngFor="let option of options" [value]="option.id">{{option.label}}</option>
   </select>
-  <span> Option selectionnée : {{selectedValue}}</span>
+  <span> Option selectionnée : {{selectedId}}</span>
 </section>
 <section>
   <select [(ngModel)]="selectedObject">
@@ -20,3 +20,6 @@
   </select>
   <span> label selectionné : {{selectedObject?.label}} | id selectionné : {{selectedObject?.id}}</span>
 </section>
+<footer>
+  <button (click)="showInConsole()">show in your console</button>
+</footer>

@@ -22,6 +22,14 @@ import {InputResizer6Component} from './TPs/input-resizer6/input-resizer6.compon
 import {InputResizer7Component} from './TPs/input-resizer7/input-resizer7.component';
 import {InputResizer8Component} from './TPs/input-resizer8/input-resizer8.component';
 import {TemplateDrivenFormComponent} from './Examples/template-driven-form/template-driven-form.component';
+import {InputResizerNgModelChangeComponent} from './TPs/input-resizer-ng-model-change/input-resizer-ng-model-change.component';
+import {ReactiveFormComponent} from './Examples/reactive-form/reactive-form.component';
+import {ReactiveFormFormbuilderComponent} from './Examples/reactive-form-formbuilder/reactive-form-formbuilder.component';
+import {InputContainerComponent} from './Examples/input-container/input-container.component';
+import {OutputContainerComponent} from './Examples/output-container/output-container.component';
+import {InteractionLocalvarContainerComponent} from './Examples/interaction-localvar-container/interaction-localvar-container.component';
+import {ViewchildContainerComponent} from './Examples/viewchild-container/viewchild-container.component';
+import {InteractionWithServiceContainerComponent} from './Examples/interaction-with-service-container/interaction-with-service-container.component';
 
 const formationRoutes: Routes = [
   {
@@ -63,6 +71,10 @@ const formationRoutes: Routes = [
       {
         path: 'input-resizer6',
         component: InputResizer6Component
+      },
+      {
+        path: 'input-resizer-ngmodelchange',
+        component: InputResizerNgModelChangeComponent
       },
       {
         path: 'input-resizer7',
@@ -111,7 +123,35 @@ const formationRoutes: Routes = [
       {
         path: 'template-driven-form',
         component: TemplateDrivenFormComponent
-      }
+      },
+      {
+        path: 'reactive-form',
+        component: ReactiveFormComponent
+      },
+      {
+        path: 'reactive-form-formbuilder',
+        component: ReactiveFormFormbuilderComponent
+      },
+      {
+        path: 'input',
+        component: InputContainerComponent
+      },
+      {
+        path: 'output',
+        component: OutputContainerComponent
+      },
+      {
+        path: 'interaction-localvar',
+        component: InteractionLocalvarContainerComponent
+      },
+      {
+        path: 'viewchild',
+        component: ViewchildContainerComponent
+      },
+      {
+        path: 'service',
+        component: InteractionWithServiceContainerComponent
+      },
     ]
   }
 ];

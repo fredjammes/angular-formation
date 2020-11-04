@@ -2,7 +2,7 @@
   <p>Date et heure à Paris : {{dateDuJour | date:'yyyy/MM/dd hh:mm:ss'}}</p>
   <p>Date et heure à New York : {{dateDuJour | date:'long':'GMT-4':'fr-FR'}}</p>
 </div>
-<section *ngIf="trainees">
+<section *ngIf="(trainees$ | async) as trainees">
   <mat-form-field>
     <mat-label>Choisissez un utilisateur:</mat-label>
     <mat-select [(ngModel)]="currentTrainee">

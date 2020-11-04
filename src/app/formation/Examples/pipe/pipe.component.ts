@@ -14,5 +14,5 @@ export class PipeComponent {
     prenom: 'chose',
     age: 32
   };
-  pairNumbers: number[] = [0, 1, 2, 3, 4, 5];
+  numbers: number[] = [0, 1, 2, 3, 4, 5];
 }

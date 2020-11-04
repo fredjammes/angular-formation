@@ -34,12 +34,17 @@ export class InputResizer4Component {
     this.isBigEnough = this.width > 50 && this.height > 50;
   }
 
-  public chooseSizeById(currentSizeId: number) {
+  public chooseSizeByIndex(index?: number) {
+    if (!!index) {
+      this.resize(this.sizes[index].width, this.sizes[index].height);
+    }
+  }
+
+  public chooseSizeById(currentSizeId?: number) {
+    if (!!currentSizeId) {
       const currentSize = this.sizes.find(size => size.id === Number(currentSizeId));
       this.resize(currentSize.width, currentSize.height);
-  }
-  public chooseSizeByIndex(index: number) {
-    this.resize(this.sizes[index].width, this.sizes[index].height);
+    }
   }
 
 }

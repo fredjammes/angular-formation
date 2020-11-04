@@ -13,7 +13,7 @@ import {UrlApiInterceptorService} from './http/url-api-interceptor.service';
       provide: HTTP_INTERCEPTORS,
       useClass: UrlApiInterceptorService,
       multi: true
-    }
+    },
   ]
 })
 export class CoreModule {

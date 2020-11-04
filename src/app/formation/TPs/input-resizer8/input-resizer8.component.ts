@@ -1,14 +1,15 @@
-import { Component, OnInit } from '@angular/core';
+import {Component} from '@angular/core';
 import {Trainee} from '../../shared/trainee/trainee';
 import {TraineeService} from '../../shared/trainee/trainee.service';
 import {Size} from '../../shared/trainee/size';
+import {Observable} from 'rxjs';
 
 @Component({
   selector: 'app-input-resizer8',
   templateUrl: './input-resizer8.component.html',
   styleUrls: ['./input-resizer8.component.scss']
 })
-export class InputResizer8Component implements OnInit {
+export class InputResizer8Component {
   public dateDuJour: Date = new Date();
   public currentSizeChoice: Size;
   public height: number;
@@ -34,18 +35,13 @@ export class InputResizer8Component implements OnInit {
   ];
   public units: string[] = ['px', 'em'];
   public currentUnit = this.units[0];
-  public trainees: Trainee[];
+  public trainees$: Observable<Trainee[]> = this.traineeService.getTrainees();
 
   public currentTrainee: Trainee;
 
   constructor(
     private traineeService: TraineeService
   ) {
-  }
-
-  public ngOnInit(): void {
-    this.traineeService.getTrainees()
-      .subscribe(receivedTrainees => this.trainees = receivedTrainees);
   }
 
   public chooseSize(size: Size) {

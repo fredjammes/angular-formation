@@ -1,0 +1,7 @@
+<ng-container *ngIf="isSleeping; else awaken">
+  <p>zzzZZZzzzZZZzzz</p>
+</ng-container>
+<ng-template #awaken>
+  <p>What's the time, I must be late !</p>
+</ng-template>
+

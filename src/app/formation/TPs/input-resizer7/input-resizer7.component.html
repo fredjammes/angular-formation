@@ -25,6 +25,7 @@
 <select [(ngModel)]="currentSizeChoiceIndex" (change)="chooseSizeByIndex(currentSizeChoiceIndex)">
   <option *ngFor="let size of sizes; index as monIndex" [value]="monIndex">{{size | sizeLabel:currentUnit}}</option>
 </select>
+<p *ngFor="let size of sizes">{{size | json}}</p>
 <select [(ngModel)]="currentSizeChoice" (change)="chooseSize(currentSizeChoice)">
   <option *ngFor="let size of sizes" [ngValue]="size">{{size | sizeLabel:currentUnit}}</option>
 </select>

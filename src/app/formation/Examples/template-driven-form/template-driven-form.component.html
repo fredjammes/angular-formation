@@ -1,30 +1,48 @@
-<form (ngSubmit)="send()" #exampleForm="ngForm" class="example-form">
+<form (ngSubmit)="send(exampleForm)" #exampleForm="ngForm" class="example-form">
   <mat-form-field class="example-full-width">
-    <input name="name" placeholder="Enter you name here" matInput type="text" [(ngModel)]="name" required #nameInput="ngModel">
+    <input name="name" placeholder="Enter you name here" matInput type="text" [(ngModel)]="name" required
+           #nameControl="ngModel" appForbiddenName="bob">
   </mat-form-field>
-  <div [hidden]="nameInput.valid || nameInput.pristine">
-    Name is required
+  <div [hidden]="nameControl.valid || nameControl.pristine">
+    <span *ngIf="nameControl.errors?.required">Name is required</span>
+    <span *ngIf="nameControl.errors?.forbiddenName">Bob is forbidden {{nameControl.errors?.forbiddenName | json}}</span>
   </div>
   <mat-form-field class="example-full-width">
-    <input name="firstname" placeholder="Enter you firstname here" matInput type="text" [(ngModel)]="firstname" required #firstnameInput="ngModel">
+    <input name="firstname" placeholder="Enter you firstname here" matInput type="text" [(ngModel)]="firstname" required
+           #firstnameControl="ngModel">
   </mat-form-field>
-  <div [hidden]="firstnameInput.valid || firstnameInput.pristine">
+  <div [hidden]="firstnameControl.valid || firstnameControl.pristine">
     Firstname is required
   </div>
   <mat-form-field class="example-full-width">
-    <input name="age" placeholder="Enter you age here" matInput type="number" [(ngModel)]="age" required #ageInput="ngModel">
+    <input name="age" placeholder="Enter you age here" matInput type="number" [(ngModel)]="age" required
+           appInbetweenCustomAge [ageMin]="3" [ageMax]="80"
+           #ageControl="ngModel">
   </mat-form-field>
-  <div [hidden]="ageInput.valid || ageInput.pristine">
-    {{ageInput.errors | json}}
+  <div [hidden]="ageControl.valid || ageControl.pristine">
+    {{ageControl.errors | json}}
     Age is invalid
   </div>
   <mat-form-field class="example-full-width">
-    <input name="email" placeholder="Enter you email here" matInput type="email" [(ngModel)]="email" required email="true" #emailInput="ngModel">
+    <input name="fingerNumber" placeholder="Enter the number of fingers you have" matInput type="number"
+           pattern="[0-9]*"
+           [(ngModel)]="fingerNumber" required #fingerNumberControl="ngModel">
+  </mat-form-field>
+  <div [hidden]="fingerNumberControl.valid || fingerNumberControl.pristine">
+    {{fingerNumberControl.errors | json}}
+    finger number is invalid
+  </div>
+  <mat-form-field class="example-full-width">
+    <input name="email" placeholder="Enter you email here" matInput type="email" [(ngModel)]="email" required
+           email="true" #emailInput="ngModel">
   </mat-form-field>
   <div [hidden]="emailInput.valid || emailInput.pristine">
-    <span *ngIf="emailInput.errors['email']">Enter a valid email</span>
-    <span *ngIf="emailInput.errors['required']">Email is required</span>
+    <div>{{emailInput.errors | json}}</div>
+    <span *ngIf="emailInput.errors?.email">Enter a valid email</span>
+    <span *ngIf="emailInput.errors?.required">Email is required</span>
   </div>
+  <div>{{exampleForm.form.value | json}}</div>
+  <div>{{exampleForm.form.status}}</div>
   <button type="submit" [disabled]="!exampleForm.form.valid">Submit</button>
   <button type="button" (click)="exampleForm.reset()">ResetForm</button>
 </form>

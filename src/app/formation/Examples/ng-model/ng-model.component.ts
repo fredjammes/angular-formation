@@ -16,6 +16,15 @@ export class NgModelComponent {
     {id: 1, label: 'seconde option'},
     {id: 2, label: 'troisième option'},
   ];
-  selectedValue;
+  selectedId;
   selectedObject;
+
+  showInConsole(): void {
+    console.log(`
+      typedText: ${this.typedText},
+      isValue1Checked: ${this.isValue1Checked}
+      isValue2Checked: ${this.isValue2Checked}
+      isValue3Checked: ${this.isValue3Checked}
+    `);
+  }
 }

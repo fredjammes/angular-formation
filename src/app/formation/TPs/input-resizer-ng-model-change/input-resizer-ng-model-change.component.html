@@ -1,0 +1,18 @@
+<div>
+  <label for="width-input">Width :</label>
+  <input id="width-input" type="number" [ngModel]="width" (ngModelChange)="onWidthChange($event)"/>
+</div>
+<div>
+  <label for="height-input">Height :</label>
+  <input id="height-input" type="number" [ngModel]="height" (ngModelChange)="onHeightChange($event)"/>
+</div>
+<div>
+  <label for="unit-select">Unit :</label>
+  <select id="unit-select" [(ngModel)]="currentUnit" (ngModelChange)="onUnitChange()">
+    <option *ngFor="let unit of units" [value]="unit">{{unit}}</option>
+  </select>
+</div>
+<p>Current Width : {{width}}</p>
+<p>Current Height : {{height}}</p>
+<div style="background-color: black;" [style.height]="heightWithUnit" [style.width]="widthWithUnit"></div>
+

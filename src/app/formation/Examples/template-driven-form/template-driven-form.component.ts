@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import {NgForm} from '@angular/forms';
 
 @Component({
   selector: 'app-template-driven-form',
@@ -10,8 +11,9 @@ export class TemplateDrivenFormComponent {
   firstname: string;
   age: number;
   email: string;
+  fingerNumber: number;
 
-  send() {
+  send(form: NgForm) {
     console.log(`
       Nom: ${this.name}
       Prénom: ${this.firstname}

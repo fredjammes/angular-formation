@@ -1,0 +1,6 @@
+<p> Voici ce que mes stagiaires disent de mon cours:  </p>
+<app-input-presentation *ngFor="let trainee of trainees$ | async"
+                        [trainee]="trainee"
+                        [leFormateurDeCetteFormation]="'Frédéric JAMMES'"
+                        thought="trop dur"
+></app-input-presentation>

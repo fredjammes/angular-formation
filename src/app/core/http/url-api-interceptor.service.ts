@@ -8,10 +8,10 @@ import {environment} from '../../../environments/environment';
 })
 export class UrlApiInterceptorService implements HttpInterceptor {
 
-  public intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    const apiUrl = environment.apiUrl + req.url;
+  public intercept(request: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
+    const apiUrl = environment.apiUrl + request.url;
 
-    const apiReq = req.clone({ url: apiUrl });
+    const apiReq = request.clone({ url: apiUrl });
 
     return next.handle(apiReq);
   }

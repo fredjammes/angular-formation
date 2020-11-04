@@ -1,6 +1,6 @@
-<div *ngIf="isSquareShown; else roundedContainer" >
+<ng-container *ngIf="isSquareShown; else roundedContainer" >
   <div class="square"></div>
-</div>
+</ng-container>
 <ng-template #roundedContainer>
   <div class="round"></div>
 </ng-template>

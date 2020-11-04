@@ -10,7 +10,6 @@ import {TraineeWebMapper} from './trainee-web.mapper';
 
 @Injectable()
 export class TraineeWebService implements TraineeService {
-
   constructor(
     private http: HttpClient
   ) { }

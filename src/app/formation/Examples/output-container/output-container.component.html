@@ -1,0 +1,6 @@
+<h2>Avez-vous trouvé cette formation utile ?</h2>
+<h3>Agree: {{agreed}}, Disagree: {{disagreed}}</h3>
+<app-output-presentation *ngFor="let trainee of trainees$ | async"
+           [trainee]="trainee"
+           (voted)="onVoted($event)">
+</app-output-presentation>

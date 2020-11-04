@@ -17,7 +17,7 @@ export class InputResizerComponent {
     this._height = value;
   }
 
-  public setWidth(focusEvent: Event) {
-    this.width = Number((focusEvent.target as HTMLInputElement).value);
+  public setWidth(event: Event) {
+    this.width = (event.target as HTMLInputElement).valueAsNumber;
   }
 }

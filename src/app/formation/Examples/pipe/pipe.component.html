@@ -3,4 +3,4 @@
 <p> string : {{maVariable | uppercase}} </p>
 <p> multipipe : {{objetComplexe | json | titlecase}} </p>
 <p> substring with start {{start}} and length {{length}} : {{maVariable | monPipe:start:length}} </p>
-<p *ngFor="let currentNumber of pairNumbers | filterPairNumber">{{ currentNumber | number:'2.3-3'}}</p>
+<p *ngFor="let currentNumber of numbers | filterPairNumber">{{ currentNumber | number:'2.3-3'}}</p>
